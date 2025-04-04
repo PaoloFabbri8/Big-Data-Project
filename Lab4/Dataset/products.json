@@ -1,0 +1,22 @@
+[
+    {"product_id": 21, "name": "Laptop", "category": "Electronics"},
+    {"product_id": 10, "name": "Headphones", "category": "Electronics"},
+    {"product_id": 3, "name": "Chair", "category": "Furniture"},
+    {"product_id": 7, "name": "Phone", "category": "Electronics"},
+    {"product_id": 5, "name": "Monitor", "category": "Electronics"},
+    {"product_id": 6, "name": "Sofa", "category": "Furniture"},
+    {"product_id": 3, "name": "Tablet", "category": "Electronics"},
+    {"product_id": 8, "name": "Desk", "category": "Furniture"},
+    {"product_id": 9, "name": "Keyboard", "category": "Electronics"},
+    {"product_id": 2, "name": "Bicycle", "category": "Sports"},
+    {"product_id": 11, "name": "Dumbbell", "category": "Sports"},
+    {"product_id": 12, "name": "Tennis Racket", "category": "Sports"},
+    {"product_id": 13, "name": "Basketball", "category": "Sports"},
+    {"product_id": 14, "name": "Football", "category": "Sports"},
+    {"product_id": 15, "name": "Sneakers", "category": "Sports"},
+    {"product_id": 16, "name": "Gloves", "category": "Sports"},
+    {"product_id": 17, "name": "Shoes", "category": "Sports"},
+    {"product_id": 18, "name": "Backpack", "category": "Sports"},
+    {"product_id": 22, "name": "Jacket", "category": "Sports"},
+    {"product_id": 20, "name": "Shorts", "category": "Sports"}
+]
