@@ -34,25 +34,24 @@ cp .env.example .env
 ### 2. Edit your .env file
 Open .env with a text editor and insert your own values. For example:
 
+```bash
 API_KEY=your_api_key_here
 KAFKA_SERVER=kafka:9092
 POSTGRES_HOST=postgres
 POSTGRES_DB=weatherdb
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=your_secure_password
+```
 
 ### 3. How to get your API Key
-Go to WeatherAPI (or your specific API provider)
 
-Create a free account
-
-Navigate to your dashboard and copy your API key
-
-Paste it in the API_KEY field of your .env
+- Go to WeatherAPI (or your specific API provider)
+- Create a free account
+- Navigate to your dashboard and copy your API key
+- Paste it in the API_KEY field of your .env
 
 ### 4. Keep your .env secure
-Do not commit .env to GitHub — it is included in .gitignore to avoid exposing sensitive data publicly.
 
-Share .env.example as a template for collaborators.
-
-Each collaborator must create their own .env locally.
+- Do not commit .env to GitHub — it is included in .gitignore to avoid exposing sensitive data publicly.
+- Share .env.example as a template for collaborators.
+- Each collaborator must create their own .env locally.
