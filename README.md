@@ -29,6 +29,7 @@ After cloning the repository, create a `.env` file by copying the provided examp
 
 ```bash
 cp .env.example .env
+```
 
 ### 2. Edit your .env file
 Open .env with a text editor and insert your own values. For example:
