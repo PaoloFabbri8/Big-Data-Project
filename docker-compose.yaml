@@ -29,7 +29,7 @@ services:
 
   producer:
     build:
-      context: ./producer
+      context: ./Crop-Disease-Alert-System/Producer/Weather
     depends_on:
       - kafka
     env_file:
@@ -39,7 +39,7 @@ services:
 
   consumer:
     build:
-      context: ./consumer
+      context: ./Crop-Disease-Alert-System/Consumer/Weather
     depends_on:
       - kafka
       - postgres
@@ -54,7 +54,7 @@ services:
     environment:
       POSTGRES_DB: weatherdb
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
     volumes:

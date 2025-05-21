@@ -4,18 +4,30 @@ from kafka import KafkaConsumer
 from kafka.errors import NoBrokersAvailable
 import os
 import time
+from dotenv import load_dotenv
+
+# Carica variabili da file .env
+load_dotenv()
 
 # Configurazioni
 KAFKA_SERVER = os.getenv('KAFKA_SERVER', 'kafka:9092')
 TOPIC = 'weather-data'
+POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
+if not POSTGRES_PASSWORD:
+    print("❌ Errore: la variabile d'ambiente POSTGRES_PASSWORD non è definita!")
+    exit(1)
 
 # Connessione al database PostgreSQL
-conn = psycopg2.connect(
-    host=os.getenv('POSTGRES_HOST', 'localhost'),
-    database=os.getenv('POSTGRES_DB', 'weatherdb'),
-    user=os.getenv('POSTGRES_USER', 'postgres'),
-    password=os.getenv('POSTGRES_PASSWORD', 'postgres')
-)
+try: 
+    conn = psycopg2.connect(
+        host=os.getenv('POSTGRES_HOST', 'postgres'),
+        database=os.getenv('POSTGRES_DB', 'weatherdb'),
+        user=os.getenv('POSTGRES_USER', 'postgres'),
+        password=POSTGRES_PASSWORD
+    )
+except Exception as e:
+    print(f"❌ Errore durante la connessione al database PostgreSQL: {e}")
+    exit(1)
 
 cursor = conn.cursor()
 
